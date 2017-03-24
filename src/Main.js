@@ -22,19 +22,19 @@ export default class Main extends React.Component {
               style={{ flexDirection: 'row', flex: 1, justifyContent: 'space-around', alignItems: 'center' }}
               >
               {row.map((val, columnIndex) => (
-                  <TouchableElastic
-                    key={columnIndex}
-                    style={{ borderWidth: 1, height: 50, width: 50, borderRadius: 25 }}
-                    onPressIn={() => console.log('we')}
-                    onPressOut={() => console.log('out')}
-                    onPress={() => console.log('here')}
-                    hitSlop={{ top: 9, right: 9, bottom: 9, left: 9 }}
-                    elasticity={columnIndex * 0.8}
-                    shrinkage={rowIndex / 4.5}
-                    >
-                    <Text>{`${columnIndex}, ${rowIndex}`}</Text>
-                  </TouchableElastic>
-                ))}
+                <TouchableElastic
+                  key={columnIndex}
+                  style={{ borderWidth: 1, height: 50, width: 50, borderRadius: 25 }}
+                  onPressIn={() => console.log('we')}
+                  onPressOut={() => console.log('out')}
+                  onPress={() => console.log('here')}
+                  hitSlop={{ top: 9, right: 9, bottom: 9, left: 9 }}
+                  elasticity={columnIndex * 0.8}
+                  shrinkage={rowIndex / 4.5}
+                  >
+                  <Text>{`${columnIndex}, ${rowIndex}`}</Text>
+                </TouchableElastic>
+              ))}
             </View>
           );
         })}
