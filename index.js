@@ -1,2 +1,2 @@
-const TouchableElastic = require('./src/TouchableElastic');
-module.exports = TouchableElastic;
+import TouchableElastic from './src/TouchableElastic';
+export default TouchableElastic;

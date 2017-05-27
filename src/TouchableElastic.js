@@ -9,12 +9,19 @@ import {
 } from 'react-native'
 
 class TouchableElastic extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      scale: new Animated.Value(1)
-    };
-  }
+  static TouchableElastic = {
+    elasticity: React.PropTypes.number,
+    shrinkage: React.PropTypes.number
+  };
+
+  static TouchableElastic = {
+    elasticity: 2,
+    shrinkage: 0.9
+  };
+
+  state = {
+    scale: new Animated.Value(1)
+  };
 
   render() {
     let { style, children } = this.props;
@@ -59,15 +66,5 @@ const styles = StyleSheet.create({
     alignItems: 'center'
   }
 });
-
-TouchableElastic.propTypes = {
-  elasticity: React.PropTypes.number,
-  shrinkage: React.PropTypes.number
-};
-
-TouchableElastic.defaultProps = {
-  elasticity: 2,
-  shrinkage: 0.9
-};
 
 export default TouchableElastic;

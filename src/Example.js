@@ -6,16 +6,12 @@ import {
 } from 'react-native'
 import TouchableElastic from './TouchableElastic';
 
-export default class Main extends React.Component {
-  componentWillMount() {
-    this.grid = Array(8).fill(Array(5).fill(0))
-  }
-
+export default class Example extends React.Component {
   render() {
     return (
       <View style={{ flex: 1, padding: 10 }}>
         <StatusBar hidden={true} />
-        {this.grid.map((row, rowIndex) => {
+        {Array(8).fill(Array(5).fill(0)).map((row, rowIndex) => {
           return (
             <View
               key={rowIndex}
@@ -25,9 +21,9 @@ export default class Main extends React.Component {
                 <TouchableElastic
                   key={columnIndex}
                   style={{ borderWidth: 1, height: 50, width: 50, borderRadius: 25 }}
-                  onPressIn={() => console.log('we')}
-                  onPressOut={() => console.log('out')}
-                  onPress={() => console.log('here')}
+                  onPressIn={() => console.log('hello')}
+                  onPressOut={() => console.log('good')}
+                  onPress={() => console.log('sir')}
                   hitSlop={{ top: 9, right: 9, bottom: 9, left: 9 }}
                   elasticity={columnIndex * 0.8}
                   shrinkage={rowIndex / 4.5}
