@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import {
   View,
   Text,
@@ -10,8 +11,8 @@ import {
 
 class TouchableElastic extends React.Component {
   static TouchableElastic = {
-    elasticity: React.PropTypes.number,
-    shrinkage: React.PropTypes.number
+    elasticity: PropTypes.number,
+    shrinkage: PropTypes.number
   };
 
   static TouchableElastic = {
