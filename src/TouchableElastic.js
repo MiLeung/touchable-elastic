@@ -13,16 +13,14 @@ class TouchableElastic extends React.Component {
   static TouchableElastic = {
     elasticity: PropTypes.number,
     shrinkage: PropTypes.number
-  };
+  }
 
   static TouchableElastic = {
     elasticity: 2,
     shrinkage: 0.9
-  };
+  }
 
-  state = {
-    scale: new Animated.Value(1)
-  };
+  scale = new Animated.Value(1)
 
   render() {
     let { style, children } = this.props;
@@ -38,7 +36,7 @@ class TouchableElastic extends React.Component {
           this.props.onPressOut ? this.props.onPressOut() : null;
         }}
         >
-        <Animated.View style={[styles.centerXY, { transform: [ { scale: this.state.scale } ] }, style]}>
+        <Animated.View style={[styles.centerXY, { transform: [ { scale: this.scale } ] }, style]}>
           {children}
         </Animated.View>
       </TouchableWithoutFeedback>
@@ -46,14 +44,14 @@ class TouchableElastic extends React.Component {
   }
 
   shrink() {
-    Animated.timing(this.state.scale, {
+    Animated.timing(this.scale, {
       toValue: this.props.shrinkage,
       duration: 100
     }).start();
   }
 
   expand() {
-    Animated.timing(this.state.scale, {
+    Animated.timing(this.scale, {
       toValue: 1,
       duration: 200,
       easing: Easing.elastic(this.props.elasticity)

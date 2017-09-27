@@ -2,7 +2,7 @@
 
 A React Native component that shows feedback via scale transform animations
 
-![](https://media.giphy.com/media/26gsxyTcMV3VvhgGc/giphy.gif)
+![](https://media.giphy.com/media/xUA7aWWRTZvVEi4rjW/giphy.gif)
 
 ### Install
 
@@ -36,7 +36,3 @@ render() {
   );
 }
 ```
-
-### Demo
-
-![](https://media.giphy.com/media/xUA7aWWRTZvVEi4rjW/giphy.gif)
